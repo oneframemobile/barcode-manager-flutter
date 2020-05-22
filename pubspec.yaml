@@ -3,7 +3,7 @@ description: Handle Qr Barcode operations in a simple way with Qr Code Manager.
 version: 1.0.0
 authors:
   - Emre Karataş
-# homepage: https://www.example.com
+homepage: https://github.com/oneframemobile/qr-code-manager-flutter
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
