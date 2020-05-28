@@ -1,16 +1,66 @@
-# example
+# Barcode Manager - Flutter
 
-A new Flutter project.
+### Introduction
+
+### Getting Started
+
+### Content
+
+### Scan a Barcode
+
+### Create a QR Code
+
+## Introduction
+
+Koçsistem supports Barcode Operations component that works with of Qr Barcode providers.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Following lines need to be added in related files. Make sure to sync project after modification:
 
-A few resources to get you started if this is your first Flutter project:
+```
+yaml.dart
+```
+```
+qr_code_manager_flutter:
+git:
+url: https://github.com/oneframemobile/barcode-manager-flutter
+```
+## Content
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## BarcodeManager
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+QR Code Manager has two functions.
+
+## scanBarcode
+
+## createQrCode
+
+## Scan a QR Code
+
+```
+createQrCode
+```
+```
+Container(
+child: BarcodeManager.createQrCode(data: "QR Code Created"))
+```
+
+## Create a QR Code
+
+```
+createQrCode
+```
+```
+FlatButton(
+color: Colors.red,
+child: Padding(
+padding: EdgeInsets.all(50),
+child: Text("Scan a Barcode",
+style: TextStyle(color: Colors.white),),),
+onPressed: () async {
+var scannedValue = await BarcodeManager.scanBarcode();
+print(scannedValue);
+}),
+```
+
