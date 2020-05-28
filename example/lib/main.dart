@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_manager_flutter/src/qr_code_manager.dart';
-
+import 'package:qr_code_manager_flutter/src/barcode_manager.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,30 +9,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      title: 'Material App',
+      title: 'QR Code Manager App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Qr Code View'),
+          title: Text('QR Code Manager'),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                  child: QrCodeManager.createQrCode(
-                    data: "QrCode",
-                  )),
+                  child: BarcodeManager.createQrCode(
+                data: "QR Code Created",
+              )),
               FlatButton(
                 child: Padding(
                   padding: EdgeInsets.all(50),
                   child: Text(
-                    "Scan Qr Code",
+                    "Scan a Barcode",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
                 onPressed: () async {
-                  var scannedValue = await QrCodeManager.scanQrCode();
+                  var scannedValue = await BarcodeManager.scanBarcode();
                   print(scannedValue);
                 },
                 color: Colors.red,
