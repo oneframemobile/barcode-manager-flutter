@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               Container(
                   child: BarcodeManager.createQrCode(
-                data: "QR Code Created",
+                "QR Code Created",
               )),
               FlatButton(
                 child: Padding(
