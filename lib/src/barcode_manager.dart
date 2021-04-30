@@ -29,7 +29,7 @@ class BarcodeManager {
     return barcodeScanModel;
   }
 
-  static Widget createQrCode({@required String data, Color color = Colors.white, double size = 300}) {
+  static Widget createQrCode(String data, {Color color = Colors.white, double size = 300}) {
     return QrCodeView(
       data: data,
       size: size,
